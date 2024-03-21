@@ -8,8 +8,8 @@ const users = [
 ];
 
 // utwórz nową listę samych imion: ['mariusz', 'anna' ...] i wyświetl w konsoli
-// 1. użyj map
 
-let result = [];
+
+let result = users.map((el) => el.name);
 
 console.log(result)
