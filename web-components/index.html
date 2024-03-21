@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Components with Shadow DOM</title>
+</head>
+<body>
+
+  <!-- Definicja niestandardowego elementu z Shadow DOM -->
+  <my-custom-element></my-custom-element>
+
+  <script>
+    // Tworzenie klasy niestandardowego elementu
+    class MyCustomElement extends HTMLElement {
+      constructor() {
+        super();
+
+        // Tworzenie shadow DOM
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+
+        // Tworzenie zawartości shadow DOM
+        const style = document.createElement('style');
+        style.textContent = `
+          p {
+            color: red;
+          }
+        `;
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = 'Hello from Shadow DOM!';
+
+        // Dodawanie elementów do shadow DOM
+        shadowRoot.appendChild(style);
+        shadowRoot.appendChild(paragraph);
+      }
+    }
+
+    // Rejestrowanie niestandardowego elementu
+    customElements.define('my-custom-element', MyCustomElement);
+  </script>
+</body>
+</html>

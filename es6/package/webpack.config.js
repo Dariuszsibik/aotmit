@@ -1,36 +1,37 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin 
 
 module.exports = {
-    mode: "production",
+    mode: 'development',
     entry: {
-        bundle: path.resolve(__dirname, "src/index.js"),
-    },
+        bundle: path.resolve(__dirname, 'src/index.js'),   
+    }, 
     output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "[name][contenthash].js",
-        clean: true,
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name][contenthash].js', 
+        clean: true, 
+        assetModuleFilename: '[name][ext]' 
     },
-    devtool: 'source-map',
-    devServer: {
+    devtool: 'source-map',  
+    devServer: { 
         static: {
             directory: path.resolve(__dirname, 'dist')
         },
         port: 3000,
         open: true,
-        hot: true,
-        compress: true,
-        historyApiFallback: true
+        hot: true, 
+        compress: true, 
+        historyApiFallback: true 
     },
     module: {
         rules: [
-            {
+            { 
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
                 ]
             },
             {
@@ -43,13 +44,13 @@ module.exports = {
                     }
                 }
             },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            { 
+                test: /\.(png|svg|jpg|jpeg|gif)$/i, 
                 use: {
                     loader: "file-loader",
                     options: {
-                        name: "[name].[hash].[ext]",
-                        outputPath: "imgs"
+                      name: "[name].[hash].[ext]",
+                      outputPath: "imgs"
                     }
                 }
             }
@@ -57,9 +58,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Webpack App",
-            filename: "index.html",
-            template: "template.html"
-        })
-    ]
+             title: 'Webpack App',
+             filename: 'index.html',
+             template : './index.html'
+        }),
+        new BundleAnalyzerPlugin() 
+     ]
 }
