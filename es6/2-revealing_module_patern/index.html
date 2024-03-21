@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>revealing module pattern</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <p>Hello World!</p>
+    <p id="result"></p>
+    <p id="result2"></p>
+
+    <script src="module1.js"></script>
+    <script src="module2.js"></script>
+    <script>
+        const addResult = Calculator.add(3, 4);
+        const multiplyResult = Calculator.multiply(3, 4);
+
+        document.querySelector('#result').innerHTML = addResult;
+        document.querySelector('#result2').innerHTML = multiplyResult;
+
+        // const Module = (function() {
+        //   const privateVar = 42;
+          
+        //   function privateFunction() {
+        //     // ...
+        //   }
+
+        //   function publicFunction() {
+        //     console.log("This is a public function");
+        //   }
+
+        //   return {
+        //     publicFunction: publicFunction
+        //   };
+        // })();
+
+        // Module.publicFunction(); // Wywołanie publicznej funkcji
+        // Module.privateVar; // To spowoduje błąd, ponieważ privateVar jest prywatny
+        // Module.privateFunction(); // To spowoduje błąd, ponieważ privateFunction jest prywatna
+    </script>
+</html>

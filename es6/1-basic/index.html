@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>basic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <p>Hello World!</p>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <script>
+        function add(x, y) {
+            return x + y;
+        }
+
+        function multiply(x, y) {
+            return x * y;
+        }
+
+        const addResult = add(3, 4);
+        const multiplyResult = multiply(3, 4);
+
+        document.querySelector('#result').innerHTML = addResult;
+        document.querySelector('#result2').innerHTML = multiplyResult;
+    </script>
+</html>
