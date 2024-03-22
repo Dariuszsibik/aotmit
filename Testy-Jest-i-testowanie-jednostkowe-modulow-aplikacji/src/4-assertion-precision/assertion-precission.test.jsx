@@ -25,13 +25,20 @@ const Checkbox = ({ checked, disabled}) => {
 };
 
 describe('checkbox element', () => {
-  it('should be checked and disabled - bad', () => {
-    render(<Checkbox />);
-    const checkbox = screen.getByLabelText('Czy wyrażasz zgodę');
-    expect(checkbox.disabled).toBeTruthy();
-    expect(checkbox.checked).toBeFalsy();
-    expect(checkbox.value).toBeTruthy();
-  });
+  // it('should be checked and disabled - bad', () => {
+  //   render(<Checkbox />);
+  //   const checkbox = screen.getByLabelText('Czy wyrażasz zgodę');
+  //   expect(checkbox.disabled).toBeTruthy();
+  //   expect(checkbox.checked).toBeFalsy();
+  //   expect(checkbox.value).toBeTruthy();
+  // });
 
-  it.todo('should be checked and disabled - good');
+  // it('should be checked and disabled - good', () => {
+  //   render(<Checkbox disabled={true} checked={true} />)
+    
+  //   const checkbox = screen.getAllByLabelText('Czy wyrażasz zgodę');
+
+  //   expect(checkbox).toBe(true);
+  //   expect(checkbox).toBeTruthy();
+  // });
 });

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm snapshot 1`] = `
+<body>
+  <div>
+    <form>
+      <label>
+        Email
+        <input
+          id="email"
+          name="email"
+          value=""
+        />
+      </label>
+      <label>
+        Hasło
+        <input
+          id="password"
+          name="password"
+          value=""
+        />
+      </label>
+      <button
+        id="button-submit"
+        type="submit"
+      >
+        Zaloguj się
+      </button>
+    </form>
+  </div>
+</body>
+`;

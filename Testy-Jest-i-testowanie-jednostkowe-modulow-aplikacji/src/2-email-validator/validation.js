@@ -4,6 +4,6 @@ const emailRegex =
 
 export const isEmail = (email) => {
   // odkomentuj linię niżej by zadziałało
-  // return emailRegex.test(email)
-  return email.includes('@');
+  return emailRegex.test(email)
+  // return email.includes('@');
 };
