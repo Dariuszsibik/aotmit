@@ -13,8 +13,8 @@ obj['user'] = {
     surname: 'Kowalski'
 }
 
-console.log(obj[mySymbol]); 
-console.log(obj['user']);
+// console.log(obj[mySymbol]); 
+// console.log(obj['user']);
 console.log(obj)
 
 

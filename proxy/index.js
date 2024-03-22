@@ -1,4 +1,3 @@
-
 const productPrices = {
     "product1": 31,
     "product2": 35,

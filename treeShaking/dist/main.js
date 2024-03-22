@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
 
-eval("/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math.js */ \"./src/math.js\");\n\r\n\r\nfunction component() {\r\n const element = document.createElement('pre');\r\n\r\n element.innerHTML = [\r\n   'Hello webpack!',\r\n   '5 cubed is equal to ' + _math_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"].cube(5)\r\n ].join('\\n\\n');\r\n\r\n  return element;\r\n}\r\n\r\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./math.js */ \"./src/math.js\");\n\r\n\r\nfunction component() {\r\n const element = document.createElement('pre');\r\n\r\n element.innerHTML = [\r\n   'Hello webpack!',\r\n   '5 cubed is equal to ' + (0,_math_js__WEBPACK_IMPORTED_MODULE_0__.cube)(5)\r\n ].join('\\n\\n');\r\n\r\n  return element;\r\n}\r\n\r\ndocument.body.appendChild(component());\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("/* harmony import */ var _math_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction square(x) {\n    return x * x;\n  }\n\nfunction cube(x) {\n    return x * x * x;\n  }\n\n function multiply(x) {\n    return x * x;\n  }\n\n  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n    square,\n    cube,\n    multiply\n  });\n\n//# sourceURL=webpack://webpack-demo/./src/math.js?");
+eval("/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   cube: () => (/* binding */ cube)\n/* harmony export */ });\n/* unused harmony exports square, multiply, testFunction */\nfunction square(x) {\r\n  return x * x;\r\n}\r\n\r\nfunction cube(x) {\r\n  return x * x * x;\r\n}\r\n\r\nfunction multiply(x) {\r\n  return x * x;\r\n}\r\n\r\nfunction testFunction(x) {\r\n  return 'test'\r\n}\n\n//# sourceURL=webpack://webpack-demo/./src/math.js?");
 
 /***/ })
 

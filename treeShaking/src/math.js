@@ -9,3 +9,7 @@ export function cube(x) {
 export function multiply(x) {
   return x * x;
 }
+
+export function testFunction(x) {
+  return 'test'
+}
